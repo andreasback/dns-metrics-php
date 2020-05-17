@@ -28,7 +28,7 @@ while(true) {
 	  $request_time = intval(round($request_time));
 	  $success = ($ip != $domain) ? 'true': 'false';
 
-	  echo ("{dnsmetrics: {language: \"php\", domain: \"${domain}\", request_time: ${request_time}, success: ${success}}}\n");
+	  echo ("{\"dnsmetrics\": {\"language\": \"php\", \"domain\": \"${domain}\", \"request_time\": ${request_time}, \"success\": ${success}}}\n");
   }
 
   sleep($interval);
